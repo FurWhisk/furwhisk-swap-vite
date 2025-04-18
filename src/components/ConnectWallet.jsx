@@ -9,7 +9,6 @@ import {
 } from '@solana/wallet-adapter-react-ui';
 import {
   PhantomWalletAdapter,
-  BackpackWalletAdapter,
   SolflareWalletAdapter
 } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
@@ -20,7 +19,6 @@ const ConnectWallet = ({ children }) => {
   const endpoint = useMemo(() => clusterApiUrl('mainnet-beta'), []);
   const wallets = useMemo(() => [
     new PhantomWalletAdapter(),
-    new BackpackWalletAdapter(),
     new SolflareWalletAdapter()
   ], []);
 
